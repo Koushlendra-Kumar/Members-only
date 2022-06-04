@@ -1,0 +1,11 @@
+extends layout 
+
+block content 
+    div(class="form-container")
+        form(action="", method="post") 
+            h1(class='heading') New Message
+            label(for="title") Title 
+            input(type="text", name='title', minLength= '1', maxLength= '100')
+            label(for="message-text") Message 
+            textarea(name="message-text", cols="28", rows="10") 
+            button(type="submit") Post

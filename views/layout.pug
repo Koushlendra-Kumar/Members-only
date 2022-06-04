@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title TOP Club
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/forms.css')
+  body
+    div(class='header')
+      h1 TOP Club 
+      if(user)
+        a(href="/")  Home 
+        if(!user.isAdmin && user.membership_status)
+            a(href="/users/admin") Be Admin
+        if(user.membership_status)
+          a(href="/users/new-message")  New Message
+        else
+          a(href="/users/join") Join Club
+            span  *
+        a(href="/users/logout")  Logout 
+      else 
+        a(href="/")  Home 
+        a(href="/users/login")  Login 
+        a(href="/users/sign-up")  Sign-up
+  block content

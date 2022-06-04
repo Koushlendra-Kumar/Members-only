@@ -1,0 +1,85 @@
+/* *{
+  border: 1px solid red;
+} */
+body {
+  padding: 0;
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: antiquewhite;
+}
+.header{
+  position:-webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.header > a > span {
+  color: red;
+}
+.header > a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.messages-container {
+  margin: 50px auto;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items:flex-start;
+}
+.message{
+  border-radius: 10px;
+  margin: 20px 10px;
+  padding: 5px 10px;
+  width: 400px;
+  height: auto;
+  border: 2px solid green;
+  display: grid;
+  grid-template-columns: 1fr 80px 20px;
+  grid-template-rows: auto;
+}
+#title {
+  grid-area: 2/1/3/4;
+  padding: 5px 0;
+  margin: 5px 0;
+  height: fit-content;
+  font-weight: bold;
+  font-size: 17px;
+}
+#message{
+  grid-column: 1/4;
+  height: fit-content;
+  padding: 10px 0;
+}
+#author{
+  font-weight: bold;
+}
+#delete{
+  cursor: pointer;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0 5px;
+  height: fit-content;
+  width: fit-content;
+  background-color: antiquewhite;
+  color: #00B7FF;
+  font-weight: bold;
+  font-size: 15px;
+  grid-area: 1/3/2/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid rgb(170, 11, 11);
+}
+a {
+  color: #00B7FF;
+  text-decoration: none;
+  height: fit-content;
+}

@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    div(class='messages-container')
+        each msg in msgs 
+          - let id = msg.url;
+          div(class='message')
+            if(user)
+              p#author @#{msg.author.username}
+              p#date #{msg.timestamp.getDate()}/#{msg.timestamp.getMonth()}/#{msg.timestamp.getFullYear()} 
+              if(user.isAdmin)
+                form(action='/'+id+"/delete", method='post') 
+                  button#delete(type="submit") X
+            else 
+              p#signup  To see who posted 
+                a(href="/users/sign-up") Sign up /  
+                a(href="/users/login")  login
+              p#nullDate   --
+            div#title #{msg.title}
+            div#message #{msg['messageText']}  

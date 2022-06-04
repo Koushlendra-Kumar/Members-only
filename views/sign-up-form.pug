@@ -1,0 +1,22 @@
+extends layout 
+
+block content 
+
+    div(class="form-container")
+        form(action=" ", method="post") 
+            h1(class='heading') Sign-Up
+            label(for="first_name") First Name
+            input(type="text", name="first_name", placeholder='Koushlendra', required = 'true') 
+            label(for="last_name") Last Name
+            input(type="text", name="last_name", placeholder='Kumar', required = 'true') 
+            label(for="username") Username
+            input(type="text", name="username", placeholder='Koushal')  
+            label(for="password") Password
+            input(type="password", name='password',minlength="6", required = 'true') 
+            label(for="confirm-password") Confirm Password
+            input(type="password", name="confirm-password",minlength="6", required = 'true')
+            button(type="submit") Sign Up
+        if errors 
+            ul 
+                for error in errors 
+                    li!= error.msg

@@ -1,0 +1,11 @@
+extends layout 
+
+block content 
+
+    div(class='form-container join')
+        form(action="", method="post") 
+            h1(class='heading') Become a Member
+            label(for="passcode") Passcode 
+            label(for='passcode', class='passcode') topclub
+            input(type="text", name='passcode')
+            button(type="submit") Submit

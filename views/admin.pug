@@ -1,0 +1,14 @@
+extends layout 
+
+block content 
+
+    div(class='form-container')
+        form(action="", method="post") 
+            h1(class='heading') Become Admin
+            label(for="admin-passcode") Admin Passcode 
+            label(for='admin-passcode', class='passcode') DIY
+            input(type="text", name='admin-passcode')
+            button(type="submit") Submit
+        if errmsg 
+            ul 
+                li #{errmsg} 
